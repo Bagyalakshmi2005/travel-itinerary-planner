@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travel Itinerary Planner</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f8fc;
+}
+
+/* Header */
+
+header{
+
+background:#0d6efd;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:bold;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:18px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:yellow;
+
+}
+
+/* Hero */
+
+.hero{
+
+height:85vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+color:white;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:22px;
+margin-bottom:35px;
+
+}
+
+.hero-content button{
+
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ffc107;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+.hero-content button:hover{
+
+background:#ff9800;
+
+}
+
+/* Features */
+
+.features{
+
+padding:60px 80px;
+
+}
+
+.features h2{
+
+text-align:center;
+margin-bottom:40px;
+color:#0d6efd;
+
+}
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
+
+.card{
+
+width:260px;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,.15);
+text-align:center;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+margin:15px 0;
+color:#0d6efd;
+
+}
+
+.card p{
+
+color:#555;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#0d6efd;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🌍 Travel Planner
+</div>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="plantrip.html">Plan Trip</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="index.html">Logout</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Explore the World With Us</h1>
+
+<p>Create your perfect travel itinerary in just a few clicks.</p>
+
+<button onclick="location.href='plantrip.html'">
+Start Planning
+</button>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2>Why Choose Travel Itinerary Planner?</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h1>🗺️</h1>
+
+<h3>Easy Planning</h3>
+
+<p>Create day-wise travel plans quickly and easily.</p>
+
+</div>
+
+<div class="card">
+
+<h1>💰</h1>
+
+<h3>Budget Management</h3>
+
+<p>Plan your trip according to your budget.</p>
+
+</div>
+
+<div class="card">
+
+<h1>🏨</h1>
+
+<h3>Accommodation</h3>
+
+<p>Choose hotels, resorts and homestays with ease.</p>
+
+</div>
+
+<div class="card">
+
+<h1>📅</h1>
+
+<h3>Trip Schedule</h3>
+
+<p>Generate a complete travel itinerary instantly.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Travel Itinerary Planner</h3>
+
+<p>Plan • Explore • Enjoy</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>

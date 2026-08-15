@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generated Itinerary</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+padding:30px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+h1{
+text-align:center;
+color:#0077b6;
+margin-bottom:25px;
+}
+
+.card{
+background:#f8fbff;
+border-left:6px solid #0077b6;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+.card h2{
+color:#0077b6;
+margin-bottom:15px;
+}
+
+.card p{
+margin:8px 0;
+font-size:17px;
+}
+
+.buttons{
+text-align:center;
+margin-top:30px;
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+color:white;
+}
+
+.print{
+background:#28a745;
+}
+
+.home{
+background:#0077b6;
+}
+
+.logout{
+background:#dc3545;
+}
+.email{
+background:#ff9800;
+color:white;
+}
+
+.email:hover{
+background:#e68900;
+}
+
+button:hover{
+opacity:.9;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function () {
+emailjs.init({
+publicKey: "Yui98-SZ-VpYjd4Wu"
+});
+})();
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌍 Generated Travel Itinerary</h1>
+
+<div class="card">
+
+<h2>👤 Traveller Details</h2>
+
+<p><b>Name :</b> <span id="name"></span></p>
+
+<p><b>Email :</b> <span id="email"></span></p>
+
+<p><b>Mobile :</b> <span id="mobile"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>📍 Trip Details</h2>
+
+<p><b>Starting Location :</b> <span id="start"></span></p>
+
+<p><b>Destination :</b> <span id="destination"></span></p>
+
+<p><b>Departure :</b> <span id="departure"></span></p>
+
+<p><b>Return :</b> <span id="returnDate"></span></p>
+
+<p><b>Travellers :</b> <span id="travellers"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>🚗 Travel Information</h2>
+
+<p><b>Travel Mode :</b> <span id="mode"></span></p>
+
+<p><b>Budget :</b> ₹ <span id="budget"></span></p>
+
+<p><b>Accommodation :</b> <span id="accommodation"></span></p>
+
+<p><b>Places to Visit :</b> <span id="places"></span></p>
+
+<p><b>Special Requirements :</b> <span id="requirements"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>📅 Suggested Plan</h2>
+
+<p>✅ Day 1 : Arrival & Hotel Check-in</p>
+
+<p>✅ Day 2 : Visit Selected Tourist Places</p>
+
+<p>✅ Day 3 : Local Shopping & Food Exploration</p>
+
+<p>✅ Day 4 : Check-out & Return Journey</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="print" onclick="window.print()">🖨 Print</button>
+
+<button class="home" onclick="location.href='home.html'">🏠 Home</button>
+
+<button class="logout" onclick="location.href='index.html'">🚪 Logout</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerHTML=localStorage.getItem("name");
+
+document.getElementById("email").innerHTML=localStorage.getItem("email");
+
+document.getElementById("mobile").innerHTML=localStorage.getItem("mobile");
+
+document.getElementById("start").innerHTML=localStorage.getItem("start");
+
+document.getElementById("destination").innerHTML=localStorage.getItem("destination");
+
+document.getElementById("departure").innerHTML=localStorage.getItem("departure");
+
+document.getElementById("returnDate").innerHTML=localStorage.getItem("returnDate");
+
+document.getElementById("travellers").innerHTML=localStorage.getItem("travellers");
+
+document.getElementById("mode").innerHTML=localStorage.getItem("mode");
+
+document.getElementById("budget").innerHTML=localStorage.getItem("budget");
+
+document.getElementById("accommodation").innerHTML=localStorage.getItem("accommodation");
+
+document.getElementById("places").innerHTML=localStorage.getItem("places");
+
+document.getElementById("requirements").innerHTML=localStorage.getItem("requirements");
+
+window.onload = function(){
+
+if(localStorage.getItem("email")){
+
+sendMail();
+
+}
+
+}
+</script>
+
+</body>
+</html>

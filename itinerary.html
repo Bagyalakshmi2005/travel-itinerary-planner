@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generated Travel Itinerary</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+(function(){
+
+emailjs.init({
+
+publicKey:"Yui98-SZ-VpYjd4Wu"
+
+});
+
+})();
+
+</script>
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial,sans-serif;
+
+}
+
+body{
+
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+padding:30px;
+
+}
+
+.container{
+
+max-width:950px;
+
+margin:auto;
+
+background:white;
+
+border-radius:15px;
+
+padding:30px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+text-align:center;
+
+color:#0077b6;
+
+margin-bottom:30px;
+
+}
+
+.card{
+
+background:#f8fbff;
+
+padding:20px;
+
+margin-bottom:20px;
+
+border-left:6px solid #0077b6;
+
+border-radius:10px;
+
+}
+
+.card h2{
+
+color:#0077b6;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+font-size:17px;
+
+margin:10px 0;
+
+}
+
+.day{
+
+background:#eef8ff;
+
+padding:15px;
+
+margin-top:15px;
+
+border-radius:8px;
+
+}
+
+.day h3{
+
+color:#023e8a;
+
+margin-bottom:10px;
+
+}
+
+img{
+
+width:100%;
+
+max-height:300px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+margin-top:15px;
+
+display:none;
+
+}
+
+.buttons{
+
+text-align:center;
+
+margin-top:30px;
+
+}
+
+button{
+
+padding:12px 22px;
+
+margin:8px;
+
+border:none;
+
+border-radius:8px;
+
+font-size:16px;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+.print{
+
+background:#28a745;
+
+}
+
+.home{
+
+background:#0077b6;
+
+}
+
+.logout{
+
+background:#dc3545;
+
+}
+
+.email{
+
+background:#ff9800;
+
+}
+
+button:hover{
+
+opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌍 Generated Travel Itinerary</h1>
+<div class="card">
+
+<h2>👤 Traveller Details</h2>
+
+<p><b>Name :</b> <span id="name"></span></p>
+
+<p><b>Email :</b> <span id="email"></span></p>
+
+<p><b>Mobile :</b> <span id="mobile"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>📍 Trip Details</h2>
+
+<p><b>Starting Location :</b> <span id="start"></span></p>
+
+<p><b>Destination :</b> <span id="destination"></span></p>
+
+<p><b>Departure Date :</b> <span id="departure"></span></p>
+
+<p><b>Return Date :</b> <span id="returnDate"></span></p>
+
+<p><b>Number of Travellers :</b> <span id="travellers"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>🚗 Travel Information</h2>
+
+<p><b>Travel Mode :</b> <span id="mode"></span></p>
+
+<p><b>Budget :</b> ₹ <span id="budget"></span></p>
+
+<p><b>Accommodation :</b> <span id="accommodation"></span></p>
+
+<p><b>Places to Visit :</b> <span id="places"></span></p>
+
+<p><b>Special Requirements :</b> <span id="requirements"></span></p>
+
+</div>
+
+<div class="card">
+
+<h2>🏞 Destination Preview</h2>
+
+<img id="destinationImage" src="" alt="Destination Image">
+
+</div>
+
+<div class="card">
+
+<h2>📅 Suggested Travel Plan</h2>
+
+<div class="day">
+
+<h3>📍 Day 1 - Arrival</h3>
+
+<p>🚗 Start your journey from the selected starting location.</p>
+
+<p>🏨 Hotel Check-in.</p>
+
+<p>🍽 Enjoy local dinner.</p>
+
+<p>🌇 Evening sightseeing.</p>
+
+</div>
+
+<div class="day">
+
+<h3>📍 Day 2 - Explore</h3>
+
+<p>🌄 Visit famous tourist attractions.</p>
+
+<p>📷 Photography.</p>
+
+<p>🍴 Taste local food.</p>
+
+<p>🛍 Shopping.</p>
+
+</div>
+
+<div class="day">
+
+<h3>📍 Day 3 - Adventure</h3>
+
+<p>🏖 Visit selected tourist places.</p>
+
+<p>🚤 Adventure activities.</p>
+
+<p>☕ Relax and enjoy the evening.</p>
+
+</div>
+
+<div class="day">
+
+<h3>📍 Day 4 - Return</h3>
+
+<p>🍳 Breakfast.</p>
+
+<p>🧳 Hotel Check-out.</p>
+
+<p>🚗 Safe Return Journey.</p>
+
+</div>
+
+</div>
+<div class="buttons">
+
+<button class="print" onclick="window.print()">🖨 Print</button>
+
+<button class="home" onclick="location.href='home.html'">🏠 Home</button>
+
+<button class="email" onclick="sendMail()">📧 Send Email</button>
+
+<button class="logout" onclick="logout()">🚪 Logout</button>
+
+</div>
+
+</div>
+
+<script>
+
+// Display Local Storage Data
+
+document.getElementById("name").innerHTML = localStorage.getItem("name");
+
+document.getElementById("email").innerHTML = localStorage.getItem("email");
+
+document.getElementById("mobile").innerHTML = localStorage.getItem("mobile");
+
+document.getElementById("start").innerHTML = localStorage.getItem("start");
+
+document.getElementById("destination").innerHTML = localStorage.getItem("destination");
+
+document.getElementById("departure").innerHTML = localStorage.getItem("departure");
+
+document.getElementById("returnDate").innerHTML = localStorage.getItem("returnDate");
+
+document.getElementById("travellers").innerHTML = localStorage.getItem("travellers");
+
+document.getElementById("mode").innerHTML = localStorage.getItem("mode");
+
+document.getElementById("budget").innerHTML = localStorage.getItem("budget");
+
+document.getElementById("accommodation").innerHTML = localStorage.getItem("accommodation");
+
+document.getElementById("places").innerHTML = localStorage.getItem("places");
+
+document.getElementById("requirements").innerHTML = localStorage.getItem("requirements");
+
+
+// Destination Image
+
+let destination = localStorage.getItem("destination");
+
+let image = document.getElementById("destinationImage");
+
+switch(destination){
+
+case "Ooty":
+
+image.src="images/ooty.jpg";
+
+break;
+
+case "Kodaikanal":
+
+image.src="images/kodaikanal.jpg";
+
+break;
+
+case "Goa":
+
+image.src="images/goa.jpg";
+
+break;
+
+case "Kerala":
+
+image.src="images/kerala.jpg";
+
+break;
+
+case "Kanyakumari":
+
+image.src="images/kanyakumari.jpg";
+
+break;
+
+case "Munnar":
+
+image.src="images/munnar.jpg";
+
+break;
+
+case "Coorg":
+
+image.src="images/coorg.jpg";
+
+break;
+
+case "Mysore":
+
+image.src="images/mysore.jpg";
+
+break;
+
+case "Pondicherry":
+
+image.src="images/pondicherry.jpg";
+
+break;
+
+case "Yercaud":
+
+image.src="images/yercaud.jpg";
+
+break;
+
+case "Manali":
+
+image.src="images/manali.jpg";
+
+break;
+
+default:
+
+image.style.display="none";
+
+}
+
+if(image.src!=""){
+
+image.style.display="block";
+
+}
+// Send Email Function
+
+function sendMail(){
+
+let params={
+
+name:localStorage.getItem("name"),
+
+email:localStorage.getItem("email"),
+
+mobile:localStorage.getItem("mobile"),
+
+start:localStorage.getItem("start"),
+
+destination:localStorage.getItem("destination"),
+
+departure:localStorage.getItem("departure"),
+
+returnDate:localStorage.getItem("returnDate"),
+
+travellers:localStorage.getItem("travellers"),
+
+mode:localStorage.getItem("mode"),
+
+budget:localStorage.getItem("budget"),
+
+accommodation:localStorage.getItem("accommodation"),
+
+places:localStorage.getItem("places"),
+
+requirements:localStorage.getItem("requirements")
+
+};
+
+emailjs.send(
+"service_q6pzmcb",
+"template_k7gghqw",
+params
+)
+
+.then(function(){
+
+alert("✅ Travel Itinerary Sent Successfully!");
+
+})
+
+.catch(function(error){
+
+console.log(error);
+
+alert("❌ Email Sending Failed!");
+
+});
+
+}
+
+
+// Logout Function
+
+function logout(){
+
+if(confirm("Do you want to logout?")){
+
+window.location.href="index.html";
+
+}
+
+}
+
+
+// Auto Send Email (Optional)
+
+// Uncomment the next line if you want the email to be sent
+// automatically whenever itinerary.html opens.
+
+// window.onload = sendMail;
+
+</script>
+
+</body>
+
+</html>
